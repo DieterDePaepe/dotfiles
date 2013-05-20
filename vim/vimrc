@@ -1,5 +1,6 @@
  set nocompatible               " be iMproved
- filetype off                   " required! (By Vundle)
+
+ syntax on
 
  "-----------------
  " Bundle Manager
@@ -13,6 +14,8 @@
  " see :h vundle for more details or wiki for FAQ
  " NOTE: comments after Bundle command are not allowed..
  
+ filetype off                   " required! (By Vundle)
+
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
 
@@ -26,6 +29,9 @@
  " Bundle 'git://git.wincent.com/command-t.git' -> non github repos
  
   Bundle 'kien/ctrlp.vim'
+  Bundle 'tpope/vim-rails'
+  Bundle 'tpope/vim-abolish'
+  Bundle 'tpope/vim-bundler'
   
  filetype plugin indent on     " required! (By Vundle)
 
