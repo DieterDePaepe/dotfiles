@@ -1,4 +1,50 @@
  set nocompatible               " be iMproved
+ 
+ set tabstop=4                  " display tabs as 4 spaces
+ set softtabstop=4              " tab in insert mode should make 4 WS chars
+ set shiftwidth=4               " whitespace for < and > commands
+ set expandtab                  " expand tab to spaces
+
+ set encoding=utf-8             " set encoding
+ set scrolloff=3                " show context around the current line
+ set autoindent                 " copy indentation when starting new line
+ set smartindent                " auto indent after braces
+
+ set hidden                     " allow to leave modified buffers
+
+ set wildmenu                   " autocomplete commands
+ set wildmode=list:longest,full " first show a list, then tab through possibilities
+
+ set cursorline                 " highlight current line
+ set ruler                      " display position in buffer
+ set laststatus=2               " always display status bar
+ set number                     " display line numbers
+
+ set directory-=.
+
+ if has('win32') || has('win64')
+   set directory^=$HOME/vimfiles/swap-files
+ else
+   set directory^=~/.vim/swap-files
+ endif
+
+ " use familiar regex format (normal/visual mode)
+ nnoremap / /\v
+ vnoremap / /\v
+ set ignorecase                 " ignore case in search
+ set smartcase                  " unless we use uppercase characters in our search
+ set gdefault                   " default line global replacements
+ set incsearch                  " show searches as you type
+ set hlsearch                   " highlight all matches of a search
+
+ " exit insert mode by typing 'jj' 
+ inoremap jj <ESC>
+
+ " easier buffer navigation
+ nnoremap <C-h> <C-w>h
+ nnoremap <C-j> <C-w>j
+ nnoremap <C-k> <C-w>k
+ nnoremap <C-l> <C-w>l
 
  syntax on
 
@@ -40,11 +86,10 @@
   Bundle 'tpope/vim-surround'
 
   Bundle 'scrooloose/nerdtree.git'
-  "Auto open if no file specified when opening VIM
-  autocmd vimenter * if !argc() | NERDTree | endif 
   "Auto close VIM if only NERDTree is open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
   map <F2> :NERDTreeToggle<CR>
 
  filetype plugin indent on     " required! (By Vundle)
 
+ colorscheme pablo
