@@ -25,6 +25,7 @@
  " Bundle 'FuzzyFinder'        -> vim-scripts repos
  " Bundle 'git://git.wincent.com/command-t.git' -> non github repos
  
- 
+  Bundle 'kien/ctrlp.vim'
+  
  filetype plugin indent on     " required! (By Vundle)
 
