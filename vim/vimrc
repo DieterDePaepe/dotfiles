@@ -1,0 +1,30 @@
+ set nocompatible               " be iMproved
+ filetype off                   " required! (By Vundle)
+
+ "-----------------
+ " Bundle Manager
+ "-----------------
+ " Brief help (or see https://github.com/gmarik/vundle)
+ " :BundleList          - list configured bundles
+ " :BundleInstall(!)    - install(update) bundles
+ " :BundleSearch(!) foo - search(or refresh cache first) for foo
+ " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Bundle command are not allowed..
+ 
+ set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+
+ " let Vundle manage Vundle
+ " required! 
+ Bundle 'gmarik/vundle'
+
+ " My Bundles:
+ " Bundle 'tpope/vim-fugitive' -> original repos on github
+ " Bundle 'FuzzyFinder'        -> vim-scripts repos
+ " Bundle 'git://git.wincent.com/command-t.git' -> non github repos
+ 
+ 
+ filetype plugin indent on     " required! (By Vundle)
+
