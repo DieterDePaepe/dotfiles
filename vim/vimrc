@@ -9,6 +9,7 @@
  set scrolloff=3                " show context around the current line
  set autoindent                 " copy indentation when starting new line
  set smartindent                " auto indent after braces
+ set backspace=2                " intuitive backspace
 
  set hidden                     " allow to leave modified buffers
 
