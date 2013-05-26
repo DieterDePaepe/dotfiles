@@ -85,6 +85,8 @@
   Bundle 'tpope/vim-abolish'
   Bundle 'tpope/vim-bundler'
   Bundle 'tpope/vim-surround'
+  Bundle 'Glench/Vim-Jinja2-Syntax'
+
 
   Bundle 'scrooloose/nerdtree.git'
   "Auto close VIM if only NERDTree is open
